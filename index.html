@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="avatar-mode" content="showcase">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avatar — Virtual Producers</title>
+  <meta name="theme-color" content="#090b0f">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./facility.css">
+</head>
+<body>
+  <a class="sr-only" href="#view">İçeriğe geç</a>
+  <header class="topbar" lang="en">
+    <a class="wordmark" href="#/live" id="wordmark">AVATAR</a>
+    <nav id="nav" aria-label="Ana gezinme">
+      <a href="#/live" data-route="live">Facility</a>
+      <a href="#/studio" data-route="studio">Producers</a>
+      <a href="#/sessions" data-route="sessions">Sessions</a>
+      <a href="#/library" data-route="library">Library</a>
+      <a href="#/system" data-route="system">System</a>
+    </nav>
+    <div class="season">
+      <span class="eyebrow" id="season-label"></span>
+      <span class="live-dot" id="conn" role="status" aria-label="Bağlantı kuruluyor"></span>
+    </div>
+  </header>
+  <main id="view" tabindex="-1"></main>
+  <div id="drawer-root"></div>
+  <section class="dock" id="dock" lang="en" hidden aria-label="Now playing">
+    <button class="play" id="dock-toggle" type="button" aria-label="Oynat"></button>
+    <div class="dock-info">
+      <div class="eyebrow" id="dock-label">Now playing</div>
+      <div class="dock-title" id="dock-title"></div>
+      <div class="dock-progress">
+        <span id="dock-current">00:00</span>
+        <input type="range" id="dock-seek" min="0" max="1000" value="0" step="1" aria-label="Konum">
+        <span id="dock-duration">--:--</span>
+      </div>
+    </div>
+    <div class="dock-links">
+      <a id="dock-download" download>Download</a>
+      <a id="dock-details" hidden>Details</a>
+    </div>
+    <audio id="dock-audio" preload="metadata"></audio>
+  </section>
+  <dialog id="execute-dialog"></dialog>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

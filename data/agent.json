@@ -1,0 +1,1 @@
+{"defaultRuntime":"codex","runtimes":[{"runtime":"codex","label":"Codex","available":false,"model":"gpt-5.6-sol","reasoningEffort":"ultra","auth":"codex"},{"runtime":"claude","label":"Claude","available":false,"model":"Claude Code varsayılanı","auth":"login"}]}
